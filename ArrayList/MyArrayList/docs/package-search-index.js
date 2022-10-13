@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"std.guedes.myarraylist.util"}];updateSearchResults();
