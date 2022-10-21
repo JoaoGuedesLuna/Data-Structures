@@ -2,7 +2,7 @@
 
 
 
-Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, as conhecidas Colletions, aqui estão algumas estruturas de dados criadas por mim como exercício prático para a disciplina. Há também alguns exercícios usando as estruturas. Além das estruturas de dados há também algoritmos de busca e de ordenação.
+Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, as conhecidas Collections, aqui estão algumas estruturas de dados criadas por mim como exercício prático para a disciplina, além de alguns exercícios usando as estruturas.  Há também algoritmos de busca e de ordenação.
 
 
 
@@ -10,19 +10,19 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 
 
-[x] ArrayList
+- [x] ArrayList
 
-[ ] Stack (*em andamento*)
+- [ ] Stack (*em andamento*)
 
-[ ] Queue
+- [ ] Queue
 
-[ ] LinkedList
+- [ ] LinkedList
 
-[ ] Dynamic Stack
+- [ ] Dynamic Stack
 
-[ ] Dynamic Queue
+- [ ] Dynamic Queue
 
-[ ] Tree
+- [ ] Tree
 
 
 
@@ -30,9 +30,9 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 
 
-[ ] Busca Sequencial
+- [ ] Busca Sequencial
 
-[ ] Busca Binária
+- [ ] Busca Binária
 
 
 
@@ -40,29 +40,29 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 
 
-[ ] Selection Sort
+- [ ] Selection Sort
 
-[ ] Bubble Sort
+- [ ] Bubble Sort
 
-[ ] Insertion Sort
+- [ ] Insertion Sort
 
-[ ] Merge Sort
+- [ ] Merge Sort
 
-[ ] Quick Sort
-
-
-
-### Auxílios que tive 
+- [ ] Quick Sort
 
 
 
-* Loiane Groner :  [Estrutura de Dados Playlist](https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBrgumpzz-l8kFMw2DLERdxi)
+### Referências 🔍
 
 
 
-* Canal Programação Dinâmica : [Estrutura de Dados Playlist](https://www.youtube.com/playlist?list=PL5TJqBvpXQv5Bb71AE5Cd_kB5rNsfU4Cp)
+* **Loiane Groner :**  [Estrutura de Dados Playlist](https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBrgumpzz-l8kFMw2DLERdxi)
 
 
 
-* Professor Douglas Maioli : [Estrutura de Dados Playlist](https://www.youtube.com/playlist?list=PLrOyM49ctTx_AMgNGQaic10qQJpTpXfn_)
+* **Canal Programação Dinâmica :**  [Estrutura de Dados Playlist](https://www.youtube.com/playlist?list=PL5TJqBvpXQv5Bb71AE5Cd_kB5rNsfU4Cp)
+
+
+
+* **Professor Douglas Maioli :** [Estrutura de Dados Playlist](https://www.youtube.com/playlist?list=PLrOyM49ctTx_AMgNGQaic10qQJpTpXfn_)
 
