@@ -25,7 +25,6 @@ public class MyArrayList<T> {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="@Constructors">
-
     /**
      * Essa classe é uma Estrutura de Dados ArrayList. Uma coleção indexada de objetos às vezes chamada de sequência.
      * Como nos vetores, índices da MyArrayList são baseados em zero, isto é, o índice do primeiro elemento é zero.
@@ -95,7 +94,7 @@ public class MyArrayList<T> {
     /**
      * Adiciona um elemento na estrutura.
      *
-     * @param element elemento que será adicionado a estrutura.
+     * @param element elemento que será adicionado na estrutura.
      */
     public void add(T element) {
         this.expandSize();
@@ -108,12 +107,12 @@ public class MyArrayList<T> {
      *
      * @param index posição em que o elemento será adicionado.
      *
-     * @param element elemento que será adicionado a estrutura.
+     * @param element elemento que será adicionado na estrutura.
      */
     public void add(int index, T element) {
         this.expandSize();
         if (!(index >= 0 && index <= this.size))
-            throw new IllegalArgumentException("ERROR: Posição inválida.");
+            throw new IllegalArgumentException("ERROR: invalid index!");
         for (int i = this.size; i > index; i--)
             this.array[i]= this.array[i-1];
         this.array[index] = element;
@@ -142,7 +141,7 @@ public class MyArrayList<T> {
     public void remove(T element) {
         int index = this.indexOf(element);
         if (index < 0)
-            throw new IllegalArgumentException("ERROR: elemento não existe.");
+            throw new IllegalArgumentException("ERROR: element does not exist!");
         this.remove(index);
     }
 
@@ -150,7 +149,7 @@ public class MyArrayList<T> {
      * Retorna um elemento contido na estrutura com base em sua posição. Caso a posição seja inválida será lançada uma
      * exceção.
      *
-     * @param index posição do elemento na estrutura que esta sendo buscado.
+     * @param index posição do elemento na estrutura que está sendo buscado.
      *
      * @return um elemento contido na estrutura com base em sua posição.
      */
@@ -180,9 +179,7 @@ public class MyArrayList<T> {
     }
 
     /**
-     * Retorna a primeira posição de um elemento que pode ou não estar contido na estrutura. Caso ele esteja na estrutura
-     * o valor retornado será maior ou igual a zero, esse valor corresponde a sua primeira posição na estrutura. Caso o
-     * elemento não esteja contido na estrutura o valor retornado será -1.
+     * Retorna a primeira posição de um elemento contido na estrutura. Caso o elemento não esteja contido na estrutura o valor retornado será -1.
      *
      * @param element elemento pela qual está se buscado a posição.
      *
@@ -197,9 +194,7 @@ public class MyArrayList<T> {
     }
 
     /**
-     * Retorna a última posição de um elemento que pode ou não estar contido na estrutura. Caso ele esteja na estrutura
-     * o valor retornado será maior ou igual a zero, esse valor corresponde a sua última posição na estrutura. Caso o
-     * elemento não esteja contido na estrutura o valor retornado será -1.
+     * Retorna a última posição de um elemento contido na estrutura. Caso o elemento não esteja contido na estrutura o valor retornado será -1.
      *
      * @param element elemento pela qual está se buscado a posição.
      *
@@ -231,13 +226,13 @@ public class MyArrayList<T> {
      */
     private void indexCheck(int index) {
         if(!(index >= 0 && index < this.size))
-            throw new IllegalArgumentException("ERROR: Posição inválida.");
+            throw new IllegalArgumentException("ERROR: invalid index!");
     }
 
     /**
-     * Retorna todo o conteúdo da estrutura em forma de texto (String)
+     * Retorna todo o conteúdo da estrutura em forma de texto (String).
      *
-     * @return todo o conteúdo da estrutura em forma de texto (String)
+     * @return todo o conteúdo da estrutura em forma de texto (String).
      */
     @Override
     public String toString() {
