@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"std.guedes.contactsapp.model","l":"Contact"},{"p":"std.guedes.contactsapp.model.builder","l":"ContactBuilder"},{"p":"std.guedes.contactsapp","l":"ContactsApp"}];updateSearchResults();

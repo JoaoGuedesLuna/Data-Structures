@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"std.guedes.contactsapp"},{"l":"std.guedes.contactsapp.model"},{"l":"std.guedes.contactsapp.model.builder"}];updateSearchResults();
