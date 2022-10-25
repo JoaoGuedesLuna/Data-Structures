@@ -8,7 +8,7 @@ O objetivo desse programa é simular um aplicativo onde a pessoa pode adicionar 
 
 
 
-![Menu](file:///C:/Users/joaog/OneDrive/Imagens/menu.png "Menu")
+![menu](https://user-images.githubusercontent.com/108489178/197857574-56e5d94e-a4ca-4a12-9aee-d74b40ff56af.png)
 
 
 
@@ -16,5 +16,4 @@ O objetivo desse programa é simular um aplicativo onde a pessoa pode adicionar 
 
 
 
-![menu2](file:///C:\Users\joaog\OneDrive\Imagens\menu2.png)
-
+![menu2](https://user-images.githubusercontent.com/108489178/197857651-26287729-b23b-4d64-a13a-0a2f73dc0ac3.png)
