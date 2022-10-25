@@ -1,6 +1,6 @@
 # Aplicativo de contatos 📱
 
-O objetivo desse programa é simular um aplicativo onde a pessoa pode adicionar seus contatos, buscar seus contatos, ou remover seus contatos. Toda a parte gráfica do programa foi feita apenas utilizando-se de métodos estáticos da classe JOptionPane. Essa foi uma das atividades que fiz enquanto estudadava a collection ArrayList.
+O objetivo desse programa é simular um aplicativo onde a pessoa pode adicionar seus contatos, buscar seus contatos, ou remover seus contatos. Toda a parte gráfica do programa foi feita apenas utilizando-se de métodos estáticos da classe JOptionPane. Essa foi uma das atividades que fiz enquanto estudava a collection ArrayList.
 
 
 
