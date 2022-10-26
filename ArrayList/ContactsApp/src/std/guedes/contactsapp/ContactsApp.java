@@ -17,7 +17,7 @@ public class ContactsApp {
     /**
      * Lista de contatos do usuário.
      */
-    private final List<Contact> contacts;
+    private final List<Contact> CONTACTS;
 
     /**
      * Essa é a classe principal do programa, é nela que haverá a execução de toda a aplicação. O objetivo dessa classe
@@ -27,7 +27,7 @@ public class ContactsApp {
      * @author João Guedes.
      */
     public ContactsApp() {
-        this.contacts = new ArrayList<>();
+        this.CONTACTS = new ArrayList<>();
         this.start();
     }
 
@@ -43,7 +43,7 @@ public class ContactsApp {
                 return;
             if (option == 3)
                 this.showAddContactDialog();
-            else if (this.contacts.isEmpty())
+            else if (this.CONTACTS.isEmpty())
                 JOptionPane.showMessageDialog(null, "     Lista de contatos vazia.", null, JOptionPane.INFORMATION_MESSAGE);
             else if (option == 1)
                 this.showContactSearchDialog();
@@ -106,8 +106,8 @@ public class ContactsApp {
             }
             newContact = this.createContact(name, telephone, email);
             if (!this.contactAlreadyExists(newContact)) {
-                this.contacts.add(newContact);
-                this.contacts.sort(Contact::compareTo);
+                this.CONTACTS.add(newContact);
+                this.CONTACTS.sort(Contact::compareTo);
                 JOptionPane.showMessageDialog(null, "Contato adicionado com sucesso!", null, JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
@@ -129,11 +129,11 @@ public class ContactsApp {
      * Exibe um painel onde o usuário poderá visualizar todos os seus contatos.
      */
     private void showContactsListDialog() {
-        String[] contactsInformations = new String[this.contacts.size()];
+        String[] contactsInformations = new String[this.CONTACTS.size()];
         String[] visibleInformation = new String[4];
         String[] options = {"Cancelar", "⏪", "⏩"};
-        for (int i = 0; i < this.contacts.size(); i++)
-            contactsInformations[i] = this.contactInfomation(this.contacts.get(i));
+        for (int i = 0; i < this.CONTACTS.size(); i++)
+            contactsInformations[i] = this.contactInfomation(this.CONTACTS.get(i));
         for (int i = 0; i < contactsInformations.length && i < visibleInformation.length; i++)
             visibleInformation[i] = contactsInformations[i];
         int option, lastIndex = visibleInformation.length-1, index, j, stop;
@@ -187,8 +187,8 @@ public class ContactsApp {
             else {
                 editedContact = this.createContact(name, telephone, email);
                 if (!this.editedContactAlreadyExists(contactSearched, editedContact)) {
-                    this.contacts.set(this.contacts.indexOf(contactSearched), editedContact);
-                    this.contacts.sort(Contact::compareTo);
+                    this.CONTACTS.set(this.CONTACTS.indexOf(contactSearched), editedContact);
+                    this.CONTACTS.sort(Contact::compareTo);
                     JOptionPane.showMessageDialog(null, "Contato editado com sucesso!", null, JOptionPane.INFORMATION_MESSAGE);
                     return;
                 }
@@ -207,7 +207,7 @@ public class ContactsApp {
         String message = this.contactInfomation(contactSearched) + "\nTem certeza que deseja excluir este contato?";
         int option = JOptionPane.showConfirmDialog(null, message, "Excluir Contato ❌",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (option == 0) {
-            this.contacts.remove(contactSearched);
+            this.CONTACTS.remove(contactSearched);
             JOptionPane.showMessageDialog(null, "Contato removido com sucesso!", null, JOptionPane.INFORMATION_MESSAGE);
             return;
         }
@@ -223,7 +223,7 @@ public class ContactsApp {
             JOptionPane.showMessageDialog(null, "Seus contatos não foram excluídos!", null, JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        this.contacts.clear();
+        this.CONTACTS.clear();
         JOptionPane.showMessageDialog(null, "Contatos excluídos com sucesso!", null, JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -289,7 +289,7 @@ public class ContactsApp {
      * @return Retorna um contato. Caso o contato não seja encontrado o valor retornado será null.
      */
     private Contact findContactById(String contactId) {
-        for (Contact contact : this.contacts) {
+        for (Contact contact : this.CONTACTS) {
             if (contact.getId().equalsIgnoreCase(contactId))
                 return contact;
         }
@@ -333,7 +333,7 @@ public class ContactsApp {
      * @return true caso o contato editado já exista ou false caso o contato editado não exista na lista de contatos.
      */
     private boolean editedContactAlreadyExists(Contact contact, Contact editedContact) {
-        for (Contact c : this.contacts) {
+        for (Contact c : this.CONTACTS) {
             if (c.getId().equalsIgnoreCase(editedContact.getId()) && !(c.equals(contact)))
                 return true;
         }
