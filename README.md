@@ -30,9 +30,9 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 
 
-- [ ] Busca Sequencial
+- [x] Busca Sequencial
 
-- [ ] Busca Binária
+- [x] Busca Binária
 
 
 
