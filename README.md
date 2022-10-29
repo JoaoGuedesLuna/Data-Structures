@@ -40,15 +40,15 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 
 
-- [ ] Selection Sort
+- [x] Selection Sort
 
-- [ ] Bubble Sort
+- [x] Bubble Sort
 
-- [ ] Insertion Sort
+- [x] Insertion Sort
 
-- [ ] Merge Sort
+- [x] Merge Sort
 
-- [ ] Quick Sort
+- [x] Quick Sort
 
 
 
