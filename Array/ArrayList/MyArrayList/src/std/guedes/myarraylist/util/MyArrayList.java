@@ -220,6 +220,15 @@ public class MyArrayList<T> {
     }
 
     /**
+     * Diz se a estrutura está vazia, se não contém elementos.
+     *
+     * @return true caso a estrutura esteja vazia ou false caso contenha algum elemento.
+     */
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+
+    /**
      * Verifica se um índice (posição) passado como parâmetro é válido.
      *
      * @param index índice que será verificado.

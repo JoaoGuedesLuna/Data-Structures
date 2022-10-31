@@ -2,7 +2,7 @@
 
 
 
-Uma ArrayList feita por mim semelhante a Collection ArrayList que existe na linguagem Java ☕.
+Uma ArrayList feita por mim, semelhante a Collection ArrayList que existe na linguagem Java ☕.
 
 
 
