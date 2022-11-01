@@ -1,59 +1,56 @@
-package std.guedes.mystack.util;
+package std.guedes.myqueue.util;
 
 /**
- * Stack (pilha, em português) é uma coleção de itens ou estrutura de dados, onde a adição e a remoção de um item é feita
- * pela mesma saída. Essa saída é comumente chamada de “top” e o extremo oposto é chamado de “base”. O item mais recentemente
- * adicionado será o primeiro removido em caso de remoção, já que estará no topo (ou “top”).
+ * O paradigma por trás da fila (queue) é o FIFO - First In, First Out, ou “o primeiro a entrar é o primeiro a sair”, em tradução livre.
+ * Sendo assim,  há somente duas formas de se manipular uma fila: 1) Inserir um elemento no final da fila e 2) remover um elemento do início da fila.
  *
- * @param <T> Tipo de dado que estará contido dentro da pilha.
+ * @param <T> Tipo de dados que será armazenado na fila.
  *
- * @author  João Guedes.
+ * @author João Guedes.
  */
-public class MyStack<T> {
+public class MyQueue<T> {
 
     // <editor-fold defaultstate="collapsed" desc="@Attributes">
     /**
-     * Vetor interno da pilha.
+     * Vetor interno da fila.
      */
-    private T [] array;
+    private T[] array;
     /**
-     * Tamanho da pilha. Leva em consideração as posições ocupadas e não o tamanho literal do estrutura.
+     * Tamanho da fila. Leva em consideração as posições ocupadas e não o tamanho literal do estrutura.
      */
     private int size;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="@Constructors">
     /**
-     * Stack (pilha, em português) é uma coleção de itens ou estrutura de dados, onde a adição e a remoção de um item é feita
-     * pela mesma saída. Essa saída é comumente chamada de “top” e o extremo oposto é chamado de “base”. O item mais recentemente
-     * adicionado será o primeiro removido em caso de remoção, já que estará no topo (ou “top”).
+     * O paradigma por trás da fila (queue) é o FIFO - First In, First Out, ou “o primeiro a entrar é o primeiro a sair”, em tradução livre.
+     * Sendo assim,  há somente duas formas de se manipular uma fila: 1) Inserir um elemento no final da fila e 2) remover um elemento do início da fila.
      *
-     * @param size Tamanho inicial da pilha.
+     * @param size Tamanho inicial da fila.
      *
-     * @author  João Guedes.
+     * @author João Guedes.
      */
-    public MyStack(int size) {
+    public MyQueue(int size) {
         this.array = (T[]) new Object[size];
         this.size = 0;
     }
 
     /**
-     * Stack (pilha, em português) é uma coleção de itens ou estrutura de dados, onde a adição e a remoção de um item é feita
-     * pela mesma saída. Essa saída é comumente chamada de “top” e o extremo oposto é chamado de “base”. O item mais recentemente
-     * adicionado será o primeiro removido em caso de remoção, já que estará no topo (ou “top”).
+     * O paradigma por trás da fila (queue) é o FIFO - First In, First Out, ou “o primeiro a entrar é o primeiro a sair”, em tradução livre.
+     * Sendo assim,  há somente duas formas de se manipular uma fila: 1) Inserir um elemento no final da fila e 2) remover um elemento do início da fila.
      *
-     * @author  João Guedes.
+     * @author João Guedes.
      */
-    public MyStack() {
+    public MyQueue() {
         this.array = (T[]) new Object[10];
         this.size = 0;
     }
     // </editor-fold>
 
     /**
-     * Retorna o tamanho da pilha. Leva em consideração as posições ocupadas e não o tamanho literal do estrutura.
+     * Retorna o tamanho da fila. Leva em consideração as posições ocupadas e não o tamanho literal do estrutura.
      *
-     * @return Tamanho da pilha.
+     * @return Tamanho da fila.
      */
     public int size() {
         return this.size;
@@ -66,7 +63,7 @@ public class MyStack<T> {
     private void expandSize() {
         if (this.array.length != this.size)
             return;
-        T [] newArray = (T[]) new Object[this.array.length*2];
+        T[] newArray = (T[]) new Object[this.array.length * 2];
         for (int i = 0; i < this.array.length; i++)
             newArray[i] = this.array[i];
         this.array = newArray;
@@ -77,47 +74,49 @@ public class MyStack<T> {
      * das posições ocupadas o array interno terá sua capacidade de armazenamento reduzida pela metade.
      */
     private void decreaseSize() {
-        if ((this.array.length > 10) && ((this.array.length - this.size) > (int) (Math.ceil(size*1.25)))) {
-            T [] newArray = (T[]) new Object[this.array.length/2];
-            for (int i = 0; i < newArray.length; i++)
-                newArray[i] = this.array[i];
-            this.array = newArray;
-        }
+        if (!(this.array.length > 10 && (this.array.length - this.size) > (int) Math.ceil(this.size*1.25)))
+            return;
+        T[] newArray = (T[]) new Object[this.array.length / 2];
+        for (int i = 0; i < newArray.length; i++)
+            newArray[i] = this.array[i];
+        this.array = newArray;
     }
 
     /**
-     * Adiciona um elemento no topo da pilha.
+     * Adiciona um elemento no fim da fila.
      *
-     * @param element Elemento que será empilhado.
+     * @param element Elemento que será enfileirado.
      */
-    public void push(T element) {
+    public void enqueue(T element) {
         this.expandSize();
         this.array[this.size++] = element;
     }
 
     /**
-     * Retorna o elemento do topo da pilha.
+     * Retorna o elemento que está no início da fila.
      *
-     * @return Elemento do topo da pilha.
+     * @return Elemento que está no início da fila.
      */
     public T peek() {
         if (this.isEmpty())
             return null;
-        return this.array[this.size-1];
+        return this.array[0];
     }
 
     /**
-     * Remove o elemento do topo da pilha.
+     * Remove o elemento que está no início da fila.
      *
-     * @return Elemento desempilhado.
+     * @return Elemento que será desenfileirado.
      */
-    public T pop() {
+    public T dequeue() {
         if (this.isEmpty())
             return null;
-        T elements = this.array[--this.size];
-        this.array[this.size] = null;
+        T firstElements = this.peek();
+        for(int i = 0; i < this.array.length-1; i++)
+            this.array[i] = this.array[i+1];
+        this.array[--this.size] = null;
         this.decreaseSize();
-        return elements;
+        return firstElements;
     }
 
     /**
@@ -183,9 +182,9 @@ public class MyStack<T> {
     }
 
     /**
-     * Diz se a pilha está vazia, se não contém elementos.
+     * Diz se a fila está vazia, se não contém elementos.
      *
-     * @return true caso a pilha esteja vazia ou false caso contenha algum elemento.
+     * @return true caso a fila esteja vazia ou false caso contenha algum elemento.
      */
     public boolean isEmpty() {
         return this.size == 0;
@@ -210,11 +209,11 @@ public class MyStack<T> {
     public String toString() {
         StringBuilder string = new StringBuilder();
         string.append("[");
-        for(int i = 0; i < this.size-1; i++) {
+        for (int i = 0; i < this.size-1; i++) {
             string.append(this.array[i]);
             string.append(", ");
         }
-        if (this.size > 0)
+        if (!this.isEmpty())
             string.append(this.array[this.size-1]);
         string.append("]");
         return string.toString();

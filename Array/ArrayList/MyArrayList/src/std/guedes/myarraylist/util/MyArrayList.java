@@ -176,6 +176,7 @@ public class MyArrayList<T> {
      */
     public void clear() {
         this.array = (T[]) new Object[10];
+        this.size = 0;
     }
 
     /**
