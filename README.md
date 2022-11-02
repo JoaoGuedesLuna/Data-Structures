@@ -12,13 +12,13 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 - [x] ArrayList
 
-- [x] Stack 
+- [x] Stack
 
-- [x] Queue 
+- [x] Queue
 
-- [ ] LinkedList (*em andamento*)
+- [x] LinkedList
 
-- [ ] Dynamic Stack
+- [ ] Dynamic Stack (*em andamento*)
 
 - [ ] Dynamic Queue
 

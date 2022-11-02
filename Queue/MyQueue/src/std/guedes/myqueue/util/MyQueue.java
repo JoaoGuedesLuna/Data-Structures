@@ -169,8 +169,8 @@ public class MyQueue<T> {
      *
      * @return true caso o elemento esteja contido na estrutura ou false caso ele não esteja contido na estrutura.
      */
-    public boolean contains(T elements) {
-        return this.indexOf(elements) >= 0;
+    public boolean contains(T element) {
+        return this.indexOf(element) >= 0;
     }
 
     /**
