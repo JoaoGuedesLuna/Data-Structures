@@ -132,52 +132,6 @@ public class MyStaticQueue2<T> {
     }
 
     /**
-     * Retorna um elemento contido na estrutura com base em sua posição. Caso a posição seja inválida será lançada uma
-     * exceção.
-     *
-     * @param index posição do elemento na estrutura que está sendo buscado.
-     *
-     * @return um elemento contido na estrutura com base em sua posição.
-     */
-    public T get(int index) {
-        this.indexCheck(index);
-        int currentIndex = this.firstIndex;
-        for (int i = 0 ; i < index; i++, currentIndex++) {}
-        return this.array[currentIndex];
-    }
-
-    /**
-     * Retorna a primeira posição de um elemento contido na estrutura. Caso o elemento não esteja contido na estrutura o valor retornado será -1.
-     *
-     * @param element elemento pela qual está se buscado a posição.
-     *
-     * @return primeira posição do elemento na estrutura. Caso ele não esteja contido na estrutura o valor retornado será -1.
-     */
-    public int indexOf(T element) {
-        int size = this.size();
-        for (int i = 0, currentIndex = this.firstIndex; i < size; i++, currentIndex++) {
-            if (this.array[currentIndex].equals(element))
-                return i;
-        }
-        return -1;
-    }
-
-    /**
-     * Retorna a última posição de um elemento contido na estrutura. Caso o elemento não esteja contido na estrutura o valor retornado será -1.
-     *
-     * @param element elemento pela qual está se buscado a posição.
-     *
-     * @return última posição do elemento na estrutura. Caso ele não esteja contido na estrutura o valor retornado será -1.
-     */
-    public int lastIndexOf(T element) {
-        for (int i = this.size()-1, currentIndex = this.lastIndex-1; i >= 0; i--, currentIndex--) {
-            if (this.array[currentIndex].equals(element))
-                return i;
-        }
-        return -1;
-    }
-
-    /**
      * Verifica se um elemento está contido na estrutura.
      *
      * @param element elemento buscado.
@@ -185,7 +139,12 @@ public class MyStaticQueue2<T> {
      * @return true caso o elemento esteja contido na estrutura ou false caso ele não esteja contido na estrutura.
      */
     public boolean contains(T element) {
-        return this.indexOf(element) >= 0;
+        int size = this.size();
+        for (int i = 0, currentIndex = this.firstIndex; i < size; i++, currentIndex++) {
+            if (this.array[currentIndex].equals(element))
+                return true;
+        }
+        return false;
     }
 
     /**
@@ -204,16 +163,6 @@ public class MyStaticQueue2<T> {
      */
     public boolean isEmpty() {
         return this.firstIndex == this.lastIndex;
-    }
-
-    /**
-     * Verifica se um índice (posição) passado como parâmetro é válido.
-     *
-     * @param index índice que será verificado.
-     */
-    private void indexCheck(int index) {
-        if(!(index >= 0 && index < this.size()))
-            throw new IllegalArgumentException("ERROR: invalid index!");
     }
 
     /**

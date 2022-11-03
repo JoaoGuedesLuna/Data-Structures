@@ -142,49 +142,6 @@ public class MyPriorityQueue<T> {
     }
 
     /**
-     * Retorna um elemento contido na estrutura com base em sua posição. Caso a posição seja inválida será lançada uma
-     * exceção.
-     *
-     * @param index posição do elemento na estrutura que está sendo buscado.
-     *
-     * @return um elemento contido na estrutura com base em sua posição.
-     */
-    public T get(int index) {
-        this.indexCheck(index);
-        return this.array[index];
-    }
-
-    /**
-     * Retorna a primeira posição de um elemento contido na estrutura. Caso o elemento não esteja contido na estrutura o valor retornado será -1.
-     *
-     * @param element elemento pela qual está se buscado a posição.
-     *
-     * @return primeira posição do elemento na estrutura. Caso ele não esteja contido na estrutura o valor retornado será -1.
-     */
-    public int indexOf(T element) {
-        for (int i = 0; i < this.size; i++) {
-            if (this.array[i].equals(element))
-                return i;
-        }
-        return -1;
-    }
-
-    /**
-     * Retorna a última posição de um elemento contido na estrutura. Caso o elemento não esteja contido na estrutura o valor retornado será -1.
-     *
-     * @param element elemento pela qual está se buscado a posição.
-     *
-     * @return última posição do elemento na estrutura. Caso ele não esteja contido na estrutura o valor retornado será -1.
-     */
-    public int lastIndexOf(T element) {
-        for (int i = this.size-1; i >= 0; i--) {
-            if (this.array[i].equals(element))
-                return i;
-        }
-        return -1;
-    }
-
-    /**
      * Verifica se um elemento está contido na estrutura.
      *
      * @param element elemento buscado.
@@ -192,7 +149,11 @@ public class MyPriorityQueue<T> {
      * @return true caso o elemento esteja contido na estrutura ou false caso ele não esteja contido na estrutura.
      */
     public boolean contains(T element) {
-        return this.indexOf(element) >= 0;
+        for (int i = 0; i < this.size; i++) {
+            if (this.array[i].equals(element))
+                return true;
+        }
+        return false;
     }
 
     /**
@@ -210,16 +171,6 @@ public class MyPriorityQueue<T> {
      */
     public boolean isEmpty() {
         return this.size == 0;
-    }
-
-    /**
-     * Verifica se um índice (posição) passado como parâmetro é válido.
-     *
-     * @param index índice que será verificado.
-     */
-    private void indexCheck(int index) {
-        if(!(index >= 0 && index < this.size))
-            throw new IllegalArgumentException("ERROR: invalid index!");
     }
 
     /**

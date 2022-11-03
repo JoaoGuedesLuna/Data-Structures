@@ -20,9 +20,9 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 - [x] Dynamic Stack
 
-- [ ] Dynamic Queue (*em andamento*)
+- [x] Dynamic Queue
 
-- [ ] Tree
+- [ ] Tree (*em andamento*)
 
 
 
