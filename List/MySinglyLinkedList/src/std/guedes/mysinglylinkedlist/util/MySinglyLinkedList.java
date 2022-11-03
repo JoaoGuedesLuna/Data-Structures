@@ -228,7 +228,7 @@ public class MySinglyLinkedList<T> {
      */
     @Override
     public String toString() {
-        StringBuilder sbuilder = new StringBuilder("MyLinkedList [");
+        StringBuilder sbuilder = new StringBuilder("[");
         if (this.first != null)
             sbuilder.append(this.first);
         sbuilder.append("]");

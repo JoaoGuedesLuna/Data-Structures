@@ -18,9 +18,9 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 - [x] LinkedList
 
-- [ ] Dynamic Stack (*em andamento*)
+- [x] Dynamic Stack
 
-- [ ] Dynamic Queue
+- [ ] Dynamic Queue (*em andamento*)
 
 - [ ] Tree
 

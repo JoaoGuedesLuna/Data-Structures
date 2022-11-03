@@ -1,5 +1,7 @@
 package std.guedes.mydoublylinkedlist.util;
 
+import java.util.Objects;
+
 /**
  * Essa classe representa um nó.
  *
@@ -122,13 +124,41 @@ public class Node<T> {
     }
 
     /**
+     * Verifica se dois nós são iguais.
+     *
+     * @param o Nó que será comparado.
+     *
+     * @return true caso os nós sejam iguais ou false caso sejam diferentes.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || this.getClass() != o.getClass())
+            return false;
+        Node<?> node = (Node<?>) o;
+        return  Objects.equals(this.data, node.data) &&
+                Objects.equals(this.previous, node.previous) &&
+                Objects.equals(this.next, node.next);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.data, this.previous, this.next);
+    }
+
+    /**
      * Retorna todos os atributos do nó em forma de texto.
      *
      * @return Todos os atributos do nó em forma de texto.
      */
     @Override
     public String toString() {
-        return "Node : " + this.data + " -> " + this.next;
+        StringBuilder sbuilder = new StringBuilder();
+        sbuilder.append(this.data);
+        if (this.next != null)
+            sbuilder.append(" -> ").append(this.next);
+        return sbuilder.toString();
     }
 
 }

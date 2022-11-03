@@ -102,7 +102,7 @@ public class MyStaticStack<T> {
      */
     public T peek() {
         if (this.isEmpty())
-            return null;
+            throw new RuntimeException("ERROR: Stack is empty!");
         return this.array[this.size-1];
     }
 
@@ -113,7 +113,7 @@ public class MyStaticStack<T> {
      */
     public T pop() {
         if (this.isEmpty())
-            return null;
+            throw new RuntimeException("ERROR: Stack is empty!");
         T elements = this.array[--this.size];
         this.array[this.size] = null;
         this.decreaseSize();
@@ -166,7 +166,7 @@ public class MyStaticStack<T> {
     /**
      * Verifica se um elemento está contido na estrutura.
      *
-     * @param elements elemento buscado.
+     * @param element elemento buscado.
      *
      * @return true caso o elemento esteja contido na estrutura ou false caso ele não esteja contido na estrutura.
      */

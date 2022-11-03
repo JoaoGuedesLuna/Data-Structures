@@ -1,6 +1,6 @@
 # MyStaticStack
 
-Uma Stack feita por mim, semelhante a Collection Stack que existe na linguagem Java ☕.
+Uma pilha estática feita por mim.
 
 
 

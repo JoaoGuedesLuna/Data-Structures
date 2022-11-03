@@ -165,7 +165,7 @@ public class MyStaticQueue<T> {
     /**
      * Verifica se um elemento está contido na estrutura.
      *
-     * @param elements elemento buscado.
+     * @param element elemento buscado.
      *
      * @return true caso o elemento esteja contido na estrutura ou false caso ele não esteja contido na estrutura.
      */

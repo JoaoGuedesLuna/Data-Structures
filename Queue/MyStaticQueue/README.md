@@ -1,6 +1,6 @@
 # MyStaticQueue
 
-Uma Queue feita por mim, semelhante a Collection Queue que existe na linguagem Java ☕.
+Uma fila estática feita por mim.
 
 
 
