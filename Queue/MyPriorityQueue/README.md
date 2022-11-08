@@ -1,4 +1,4 @@
-# MyPriorityQueue
+# MyPriorityQueue 👩‍🦽👨‍🦯🚶‍♂️🚶‍♂️🚶‍♀️
 
 Uma Priority Queue feita por mim, semelhante a Collection Queue que existe na linguagem Java ☕.
 

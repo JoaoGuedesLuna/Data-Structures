@@ -11,18 +11,12 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 
 
 - [x] ArrayList
-
 - [x] Stack
-
 - [x] Queue
-
 - [x] LinkedList
-
 - [x] Dynamic Stack
-
 - [x] Dynamic Queue
-
-- [ ] Tree (*em andamento*)
+- [x] Binary Search Tree
 
 
 

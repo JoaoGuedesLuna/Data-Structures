@@ -1,4 +1,4 @@
-# MyStaticStack
+# MyStaticStack 📚
 
 Uma pilha estática feita por mim.
 

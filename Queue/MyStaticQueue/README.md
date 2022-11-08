@@ -1,4 +1,4 @@
-# MyStaticQueue
+# MyStaticQueue 🐑🐑🐑
 
 Uma fila estática feita por mim.
 

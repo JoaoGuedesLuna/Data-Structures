@@ -1,4 +1,4 @@
-# MyDynamicStack
+# MyDynamicStack 📚
 
 Uma pilha dinâmica feita por mim.
 
