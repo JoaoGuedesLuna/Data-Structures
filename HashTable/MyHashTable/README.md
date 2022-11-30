@@ -1,4 +1,4 @@
-# MyHashTable
+# MyHashTable 📔
 
 MyHashTable é uma implementação de uma Tabela Hash feita por mim.
 

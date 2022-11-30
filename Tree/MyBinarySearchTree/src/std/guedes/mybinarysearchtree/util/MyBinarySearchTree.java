@@ -1,4 +1,4 @@
-package std.guedes.binarysearchtree.util;
+package std.guedes.mybinarysearchtree.util;
 
 /**
  * Em Ciência da computação, uma árvore binária de busca é uma estrutura de dados de árvore binária baseada em nós,
@@ -10,7 +10,7 @@ package std.guedes.binarysearchtree.util;
  *
  * @author João Guedes.
  */
-public class BinarySearchTree<T> extends BinaryTree<T>{
+public class MyBinarySearchTree<T> extends MyBinaryTree<T> {
 
     /**
      * Em Ciência da computação, uma árvore binária de busca é uma estrutura de dados de árvore binária baseada em nós,
@@ -22,7 +22,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
      *
      * @author João Guedes.
      */
-    public BinarySearchTree(Node<T> root) {
+    public MyBinarySearchTree(Node<T> root) {
         super(root);
     }
 
@@ -36,7 +36,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
      *
      * @author João Guedes.
      */
-    public BinarySearchTree(T data) {
+    public MyBinarySearchTree(T data) {
         super(data);
     }
 
@@ -48,7 +48,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
      *
      * @author João Guedes.
      */
-    public BinarySearchTree() {
+    public MyBinarySearchTree() {
         super();
     }
 
@@ -175,7 +175,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
      *
      * @return uma subárvore.
      */
-    public BinarySearchTree<T> search(T data) {
+    public MyBinarySearchTree<T> search(T data) {
         return this.search(data, this.getRoot());
     }
 
@@ -188,10 +188,10 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
      *
      * @return uma subárvore.
      */
-    private BinarySearchTree<T> search(T data, Node<T> root) {
+    private MyBinarySearchTree<T> search(T data, Node<T> root) {
         Comparable<T> dataComparable = (Comparable) data;
         if (root == null || dataComparable.compareTo(root.getData()) == 0)
-            return new BinarySearchTree<>(root);
+            return new MyBinarySearchTree<>(root);
         else if(dataComparable.compareTo(root.getData()) < 0)
             return this.search(data, root.getLeft());
         return this.search(data, root.getRight());

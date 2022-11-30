@@ -1,4 +1,4 @@
-# BinarySearchTree 🌳
+# MyBinarySearchTree 🌳
 
 Uma árvore binária de busca implementada por mim.
 

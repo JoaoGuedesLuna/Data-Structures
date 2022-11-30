@@ -1,4 +1,4 @@
-package std.guedes.binarysearchtree.util;
+package std.guedes.mybinarysearchtree.util;
 
 /**
  * Essa classe representa um árvore binária. Numa árvore binária cada elemento é representado por um nó, e cada nó
@@ -8,7 +8,7 @@ package std.guedes.binarysearchtree.util;
  *
  * @author João Guedes.
  */
-public class BinaryTree<T> {
+public class MyBinaryTree<T> {
 
     /**
      * Raiz da árvore.
@@ -23,7 +23,7 @@ public class BinaryTree<T> {
      *
      * @author João Guedes.
      */
-    public BinaryTree(Node<T> root) {
+    public MyBinaryTree(Node<T> root) {
         this.root = root;
     }
 
@@ -35,7 +35,7 @@ public class BinaryTree<T> {
      *
      * @author João Guedes.
      */
-    public BinaryTree(T data) {
+    public MyBinaryTree(T data) {
         this.root = new Node<T>(data);
     }
 
@@ -45,7 +45,7 @@ public class BinaryTree<T> {
      *
      * @author João Guedes.
      */
-    public BinaryTree(){
+    public MyBinaryTree(){
     }
 
     /**

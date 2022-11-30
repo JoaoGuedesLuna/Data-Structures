@@ -1,4 +1,4 @@
-package std.guedes.binarysearchtree.util;
+package std.guedes.mybinarysearchtree.util;
 
 import java.util.Objects;
 

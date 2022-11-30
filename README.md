@@ -18,6 +18,7 @@ Apesar da linguagem Java ☕ já conter estruturas de dados já implementadas, a
 - [x] Dynamic Queue
 - [x] HashTable
 - [x] Binary Search Tree
+- [ ] AVL Tree (em andamento)
 
 
 

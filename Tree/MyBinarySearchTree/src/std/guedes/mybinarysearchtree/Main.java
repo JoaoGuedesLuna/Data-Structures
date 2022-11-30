@@ -1,8 +1,8 @@
-package std.guedes.binarysearchtree;
+package std.guedes.mybinarysearchtree;
 
-import std.guedes.binarysearchtree.util.BinarySearchTree;
-import std.guedes.binarysearchtree.util.BinaryTree;
-import std.guedes.binarysearchtree.util.Node;
+import std.guedes.mybinarysearchtree.util.MyBinarySearchTree;
+import std.guedes.mybinarysearchtree.util.MyBinaryTree;
+import std.guedes.mybinarysearchtree.util.Node;
 
 /**
  * @author João Guedes.
@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("---------------------- ÁRVORE BINÁRIA ----------------------");
-        BinaryTree<Integer> binaryTree = new BinaryTree<>(7);
+        MyBinaryTree<Integer> binaryTree = new MyBinaryTree<>(7);
         binaryTree.getRoot().setLeft(new Node<>(18));
         binaryTree.getRoot().getLeft().setLeft(new Node<>(14));
         binaryTree.getRoot().getLeft().getLeft().setLeft(new Node<>(15));
@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Percurso em pós ordem: " + binaryTree.postorderTraversal());
         System.out.println("Altura da árvore: " + binaryTree.height());
         System.out.println("------------------ ÁRVORE BINÁRIA DE BUSCA ------------------");
-        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+        MyBinarySearchTree<Integer> binarySearchTree = new MyBinarySearchTree<>();
         binarySearchTree.add(7);
         binarySearchTree.add(18);
         binarySearchTree.add(14);
@@ -54,7 +54,7 @@ public class Main {
         System.out.println("Menor elemento da árvore: " + binarySearchTree.min());
         System.out.println("Maior elemento da árvore: " + binarySearchTree.max());
         System.out.println("-------------- SUB ÁRVORE BINÁRIA DE BUSCA (14) --------------");
-        BinarySearchTree<Integer> subBinarySearchTree = binarySearchTree.search(14);
+        MyBinarySearchTree<Integer> subBinarySearchTree = binarySearchTree.search(14);
         System.out.println("Percurso em pré ordem: " + subBinarySearchTree.preorderTraversal());
         System.out.println("Percurso em ordem: " + subBinarySearchTree.inorderTraversal());
         System.out.println("Percurso em pós ordem: " + subBinarySearchTree.postorderTraversal());
